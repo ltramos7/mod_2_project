@@ -1,0 +1,3 @@
+class MuralsController < ApplicationController
+    
+end
