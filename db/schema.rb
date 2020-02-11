@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_02_11_191750) do
   create_table "murals", force: :cascade do |t|
     t.string "mural_name"
     t.integer "artist_id"
-    t.integer "commissinor_id"
+    t.integer "commissioner_id"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
