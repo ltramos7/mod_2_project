@@ -3,7 +3,7 @@ class CreateMurals < ActiveRecord::Migration[6.0]
     create_table :murals do |t|
       t.string :mural_name
       t.integer :artist_id
-      t.integer :commissinor_id
+      t.integer :commissioner_id
       t.string :location
 
       t.timestamps
