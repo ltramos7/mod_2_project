@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :commissioners
    
 
- resources :users, only: [:new, :show, :index, :edit, :create]
+  resources :users, only: [:new, :show, :index, :edit, :create]
+  patch '/users/:id', to: 'users#update'
 
 end
