@@ -8,8 +8,6 @@ class MuralFavoritesController < ApplicationController
 
     end
 
-
-
     private
 
     def find_user
