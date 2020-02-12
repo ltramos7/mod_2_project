@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p><%= @user.user_name %></p>
 <p><%= @user.first_name %></p>
 <p><%= @user.last_name %></p>
@@ -8,3 +9,17 @@
 <h2>Do you want to delete your profile?</h2>
 
 <%= link_to "Delete Profile", @user, method: :delete, data: {confirm: "Your Profile is deleted."} %>
+=======
+<h1>Welcome: <%= @user.user_name %></h1>
+
+<h2>Here is a list of your favorite murals</h2>
+<%= form_for @user do |f| %>
+    <%= f.collection_select :murals, Mural.all, :id, :mural_name%>
+   
+<% end %>
+
+
+<h3>Would you like to edit your profile?</h3>
+<%= link_to "Edit User", edit_user_path(@user) %>
+
+>>>>>>> 1fd513db9b88348101c25eaf454fa3d410f05a2a

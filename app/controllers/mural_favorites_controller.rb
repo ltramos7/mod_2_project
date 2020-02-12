@@ -1,2 +1,3 @@
 class MuralFavoritesController < ApplicationController
+
 end
