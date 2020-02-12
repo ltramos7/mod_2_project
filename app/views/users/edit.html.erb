@@ -1,4 +1,5 @@
-<h2>Lets update a User:</h2>
+<% provide(:title, "Edit user") %> <h1>Update your profile</h1>
+
 <%= form_with model: @user do |f| %>
   
 
@@ -8,7 +9,7 @@
 <%= f.text_field :last_name %>
 <%= f.label :"User Name" %>
 <%= f.text_field :user_name %>
-<%= f.submit %>
+<%= f.submit "Save changes" %>
 
 
 <% end %>
