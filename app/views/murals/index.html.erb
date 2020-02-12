@@ -1,0 +1,10 @@
+<h1>Here is a list of murals. </h1>
+
+<% @murals.each do |mural| %>
+    <ul>
+        <h3> Mural: <%= link_to mural.mural_name, mural_path(mural)%></h3>
+        <p> Artist: <%= link_to mural.artist.name, artist_path(mural.artist)%></p>
+        <p> Commissioner: <%= mural.commissioner.name%></p>    
+    </ul>
+
+<% end %>
