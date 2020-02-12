@@ -26,8 +26,8 @@
 
 # m2 = Mural.create(mural_name: "Seasonings", artist_id: 2, commissioner_id: 1, location: "456 W. Illinois")
 
-# mf1 = MuralFavorite.create(user_id: User.first.id, mural_id: Mural.first.id)
-# mf2 = MuralFavorite.create(user_id: User.second.id, mural_id: Mural.second.id)
+mf1 = MuralFavorite.create(user_id: User.first.id, mural_id: Mural.first.id)
+mf2 = MuralFavorite.create(user_id: User.second.id, mural_id: Mural.second.id)
 
 
 # user_one = User.create(user_name: "Matthew")

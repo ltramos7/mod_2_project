@@ -2,3 +2,7 @@
 
 <p>Mural Name:<%= @mural.mural_name %> </p>
 <p> Artist's Name: <%= @mural.artist.name %> </p>
+
+<%= button_to "Like", mural_favorites_path(@user), method: :post %>
+
+

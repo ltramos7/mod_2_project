@@ -7,4 +7,6 @@ class MuralsController < ApplicationController
         @mural = Mural.find(params[:id])
     end
 
+
+
 end
