@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resources :commissioners
    
 
+<<<<<<< HEAD
+  resources :users
+  
+=======
   resources :users, only: [:new, :show, :index, :edit, :create, :update]
+>>>>>>> 1fd513db9b88348101c25eaf454fa3d410f05a2a
 
 end
