@@ -8,6 +8,5 @@ Rails.application.routes.draw do
    
 
   resources :users, only: [:new, :show, :index, :edit, :create, :update]
-  # patch '/users/:id', to: 'users#update'
 
 end
