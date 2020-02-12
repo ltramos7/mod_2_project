@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :commissioners
    
 
-  resources :users, only: [:new, :show, :index, :edit, :create, :update]
+  resources :users
   
 
 end
