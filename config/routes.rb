@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   # only: [:index, :show, :edit]
 
   resources :murals
+
+  resources :commissioners
    
 
   resources :users, only: [:new, :show, :index, :edit, :create, :update]
-  # patch '/users/:id', to: 'users#update'
+
 
 end
