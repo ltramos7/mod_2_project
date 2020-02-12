@@ -1,8 +1,9 @@
 <h1>Welcome: <%= @user.user_name %></h1>
 
 <h2>Here is a list of your favorite murals</h2>
+
 <%= form_for @user do |f| %>
-    <%= f.collection_select :murals, Mural.all, :id, :mural_name%>
+    <%= f.collection_select :murals, @user.murals, :id, :mural_name%>
    
 <% end %>
 
