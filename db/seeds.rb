@@ -23,6 +23,7 @@
 
 # m1 = Mural.create(mural_name: "A moment in time", artist_id: 1, commissioner_id: 2, location: "123 W. Chicago")
 
+
 # m2 = Mural.create(mural_name: "Seasonings", artist_id: 2, commissioner_id: 1, location: "456 W. Illinois")
 
 # mf1 = MuralFavorite.create(user_id: 1, mural_id: 1)
