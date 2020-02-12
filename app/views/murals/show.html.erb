@@ -1,7 +1,8 @@
 <h1>Here is the Mural selected.</h1>
 
 <p>Mural Name:<%= @mural.mural_name %> </p>
-<p>Artist's Name: <%= @mural.artist.name %> </p>
-<p>Add this mural to your favorites!</p>
+<p> Artist's Name: <%= @mural.artist.name %> </p>
 
-<%# <%= button_to 'Like', murals_path(@user), method: :post %>
+<%= button_to "Like", mural_favorites_path(@user), method: :post %>
+
+
