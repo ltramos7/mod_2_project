@@ -2,9 +2,18 @@
 <p>Find me in app/views/sessions/new.html.erb</p>
 
 
+
 <h2>Please log in</h2>
 <!-- <%= form_with url: '/login' do |f| %>
     <%= f.label :"User Name" %>
     <%= f.text_field :user_name %>
     <%= f.submit "Login"%>
 <% end %> -->
+
+<%= form_tag "/login" do %>
+  <p>Username: <%= text_field_tag :user_name %></p>
+  <%= submit_tag "Log In" %>
+<% end %>
+
+<%= link_to "Not a user? Sign up!", new_user_path %>
+
