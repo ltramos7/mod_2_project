@@ -42,6 +42,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker'
   gem 'bcrypt', '~> 3.1.7'
+  gem 'bulma-rails', '~> 0.8.0'
+  gem 'bulma-extensions-rails'
+
 
 end
 
