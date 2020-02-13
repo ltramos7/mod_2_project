@@ -10,9 +10,12 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
+        @user.email.downcase!
         if @user.save
-            redirect_to user_path(@user)
+            flash[:notice] = "Account created successfully!"
+            render :show
         else
+            flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
             render :new
         end
     end
@@ -34,14 +37,20 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+
+        render :new
+    end
 
    
 
 
     private
-
+    
     def user_params
-        params.require(:user).permit(:user_name, :first_name, :last_name)
+        params.require(:user).permit(:user_name, :first_name, :last_name, :email, :password, :password_confirmation)
     end
 
 end

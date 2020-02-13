@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_12_000728) do
+ActiveRecord::Schema.define(version: 2020_02_13_030311) do
 
   create_table "artist_favorites", force: :cascade do |t|
     t.integer "user_id"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 2020_02_12_000728) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
     t.string "last_name"
+    t.string "email"
+    t.string "password_digest"
   end
 
 end

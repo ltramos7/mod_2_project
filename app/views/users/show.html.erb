@@ -1,5 +1,15 @@
-<p><%= @user.user_name %></p>
-<p><%= @user.first_name %></p>
-<p><%= @user.last_name %></p>
+<h1>Welcome: <%= @user.user_name %></h1>
+
+<h2>Here is a list of your favorite murals</h2>
+
+<%= form_for @user do |f| %>
+    <%= f.collection_select :murals, @user.murals, :id, :mural_name%>
+<% end %>
+
+<h3><%= button_to "Logout", login_path %></h3>
+
 <h2>Would you like to edit your profile?</h2>
 <%= link_to "Edit User", edit_user_path(@user) %>
+
+<h3>Do you want to delete your profile?</h3>
+<%= link_to "Delete Profile", @user, method: :delete, data: {confirm: "Your Profile is deleted."} %>
