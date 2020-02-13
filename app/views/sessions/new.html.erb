@@ -10,10 +10,22 @@
     <%= f.submit "Login"%>
 <% end %> -->
 
-<%= form_tag "/login" do %>
+<!-- <%= form_tag "/login" do %>
   <p>Username: <%= text_field_tag :user_name %></p>
   <%= submit_tag "Log In" %>
+<% end %> -->
+
+<%= form_for :login do |f| %>
+  <!-- <p>Username: <%= text_field_tag :user_name %></p> -->
+  <%= f.label :user_name %>
+  <%= f.text_field :user_name %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  
+  <%= f.submit "Log In" %>
 <% end %>
+
 
 <%= link_to "Not a user? Sign up!", new_user_path %>
 
