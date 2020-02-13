@@ -1,10 +1,12 @@
 <h1>Welcome: <%= @user.user_name %></h1>
 
 <h2>Here is a list of your favorite murals</h2>
+
 <%= form_for @user do |f| %>
     <%= f.collection_select :murals, @user.murals, :id, :mural_name%>
 <% end %>
 
+<h3><%= button_to "Logout", login_path %></h3>
 
 <h3>Would you like to edit your profile?</h3>
 <%= link_to "Edit User", edit_user_path(@user) %>
