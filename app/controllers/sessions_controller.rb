@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user
     else
+      # flash[:message] = "Invalid credentials" This is giving me an error message that isnt going away
       flash[:message] = "Invalid credentials"
       redirect_to login_path
     end

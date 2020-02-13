@@ -10,8 +10,9 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        if @user.save
-            redirect_to user_path(@user)
+        if @user.valid?
+            @user.save
+            redirect_to @user
         else
             render :new
         end
@@ -41,10 +42,6 @@ class UsersController < ApplicationController
         render :new
      
     end
-
-
-   
-
 
     private
 
