@@ -2,3 +2,7 @@
 
 <p><%= link_to "Create a New User", new_user_path %></p>
 
+<%= form_tag "/login" do %>
+  <p>Username: <%= text_field_tag :user_name %></p>
+  <%= submit_tag "Log In" %>
+<% end %>
