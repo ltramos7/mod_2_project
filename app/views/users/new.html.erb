@@ -1,16 +1,25 @@
 <h2>Please create a new user</h2>
 
 
-<%= form_with model: @user do |f| %>
-  
+<%= form_for @user do |f| %>
+    
+    <% if @user.errors.any? %>
+        <h2>There were some errors:</h2>
+        <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    <% end %>
 
-<%= f.label :"First Name" %>
-<%= f.text_field :first_name %>
-<%= f.label :"Last Name" %>
-<%= f.text_field :last_name %>
-<%= f.label :"User Name" %>
-<%= f.text_field :user_name %>
-<%= f.submit %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+
+    <%= f.label :username %>
+    <%= f.text_field :user_name %>
+    
+    <%= f.submit %>
 
 
 <% end %>
