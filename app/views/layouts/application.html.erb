@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>Mod2Project</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,13 +12,24 @@
   </head>
 
   <body>
-    <% if notice %>
-      <%= notice %>
-	  <% end %>
-	
-	  <% if alert %>
-      <%= alert %>
-	  <% end %>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="https://versions.bulma.io/0.7.0">
+      <img src="" alt="" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+    </div>
+    </nav>
+    <section class="section">
+    <div class="content">
     <%= yield %>
+    </div>
+    </section>
   </body>
 </html>
