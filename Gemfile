@@ -42,7 +42,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'faker'
   gem 'bcrypt', '~> 3.1.7'
-
+  gem 'rest-client'
 end
 
 group :test do
